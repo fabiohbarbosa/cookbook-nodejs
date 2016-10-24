@@ -4,6 +4,7 @@ execute 'prepare node apt' do
 end
 
 apt_package 'nodejs'
+apt_package 'npm'
 
 execute 'install n' do
     command 'npm install n -g'
