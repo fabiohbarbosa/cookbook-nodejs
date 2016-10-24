@@ -1,6 +1,10 @@
+for dep in node['nodejs']['dependencies']
+  Chef::Log.info("Dependency '#{dep}'")
+end
+
 apt_package 'curl'
 
-Chef::Log.info("Install node '#{node['nodejs']['version']}'")
+Chef::Log.info("Installing Node.js '#{node['nodejs']['version']}'")
 
 execute 'prepare node apt' do
   command 'curl -sL https://deb.nodesource.com/setup_6.x | bash -'
@@ -13,8 +17,6 @@ execute 'install n' do
     command 'npm install n -g'
     action :run
 end
-
-Chef::Log.info("Install node '#{node['nodejs']['version']}'")
 
 execute 'install node' do
     command 'n ' + node['nodejs']['version']
