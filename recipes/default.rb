@@ -1,7 +1,3 @@
-for dep in node['nodejs']['dependencies']
-  Chef::Log.info("Dependency '#{dep}'")
-end
-
 apt_package 'curl'
 
 Chef::Log.info("Installing Node.js '#{node['nodejs']['version']}'")
@@ -23,16 +19,10 @@ execute 'install node' do
     action :run
 end
 
-execute 'install bower' do
-  command 'npm install bower -g'
-  action :run
-end
-
-execute 'install gulp' do
-  command 'npm install gulp -g'
-  action :run
-end
-
-apt_package 'nodejs' do
-  action :remove
+for dep in node['nodejs']['dependencies']
+  Chef::Log.info("Installing '#{dep}' dependency")
+  execute 'install dependency' do
+    command 'npm install -g' + dep
+    action :run
+  end
 end
