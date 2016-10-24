@@ -14,7 +14,7 @@ execute 'install n' do
     action :run
 end
 
-execute 'install node' do
+execute 'update node' do
     command 'n ' + node['nodejs']['version']
     action :run
 end
@@ -22,7 +22,7 @@ end
 for dep in node['nodejs']['dependencies']
   Chef::Log.info("Installing '#{dep}' dependency")
   execute 'install dependency' do
-    command 'npm install -g' + dep
+    command 'npm install -g ' dep
     action :run
   end
 end
