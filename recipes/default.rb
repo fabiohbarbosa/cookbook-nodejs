@@ -21,7 +21,7 @@ end
 
 for dep in node['nodejs']['dependencies']
   Chef::Log.info("Installing '#{dep}' dependency")
-  execute 'install #{dep} dependency' do
+  execute "install #{dep} dependency" do
     command 'npm install -g '+ dep
     action :run
   end
