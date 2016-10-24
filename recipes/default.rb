@@ -1,3 +1,5 @@
+apt_package 'curl'
+
 execute 'prepare node apt' do
   command 'curl -sL https://deb.nodesource.com/setup_6.x | bash -'
   action :run
