@@ -20,4 +20,12 @@ cookbook 'nodejs', git: 'git://github.com/fabiohbarbosa/cookbook-nodejs.git'
 ]
 ```
 
-**version**: Default *stable*
+**version**: *Default: stable*
+
+## After Build
+Change Node.js version
+```sh
+sudo n version
+```
+
+Find versions [here](https://nodejs.org/en/download/releases/).
