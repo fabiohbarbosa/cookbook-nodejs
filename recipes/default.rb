@@ -12,6 +12,8 @@ execute 'install n' do
     action :run
 end
 
+Chef::Log.info("Install node['nodejs']['version'] version")
+
 execute 'install node' do
     command 'n ' + node['nodejs']['version']
     action :run
