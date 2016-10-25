@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "apt": ">= 0.0.0",
     "curl": ">= 0.0.0"
   },
   "name": "nodejs",
