@@ -10,11 +10,11 @@
   "suggestions": {
   },
   "platforms": {
-    "ubuntu": ">= 0.0.0"
+    "ubuntu": ">= 16.04"
   },
   "maintainer": "Fabio Henrique Gonzales Barbosa",
   "long_description": "Install Node.js. You can set the version by setting a node/role attribute:\n    \"nodejs\" => { \"version\" => \"stable\" }\n",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "recommendations": {
   },
   "recipes": {
