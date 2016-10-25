@@ -1,3 +1,5 @@
+apt_package 'curl'
+
 Chef::Log.info("Installing Node.js '#{node['nodejs']['version']}'")
 
 execute 'prepare node apt' do
