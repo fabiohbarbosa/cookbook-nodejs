@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "apt": ">= 0.0.0"
+    "apt": ">= 0.0.0",
+    "curl": ">= 0.0.0"
   },
   "name": "nodejs",
   "maintainer_email": "fabiohbarbosa@gmail.com",
