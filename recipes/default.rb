@@ -1,4 +1,4 @@
-apt_package 'curl'
+include_recipe 'curl::default'
 
 Chef::Log.info("Installing Node.js '#{node['nodejs']['version']}'")
 
